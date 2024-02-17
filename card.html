@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Step by Step</title>
+</head>
+
+<body>
+    <!-- меню -->
+    <div class="popup popup-close popup-open" id="popup">
+        <div class="popup-body" id="popup-body">
+            <div class="close">
+                <h5>Меню</h5>
+                <div id="close-popup">&#10006</div>
+            </div>
+            <nav>
+                <a class="fade" href="main.html">главная</a>
+                <a class="fade" href="catalog.html">каталог</a>
+                <a class="linkactive fade" href="card.html">корзина</a>
+                <a href="#">избранное</a>
+            </nav>
+        </div>
+    </div>
+    <!-- меню -->
+    <div class="bc" style="background-color: #F3F3F3;">
+        <div class="main container">
+            <!-- шапка -->
+            <header>
+                <a href="main.html"><img src="img/logo.svg" alt=""></a>
+                <div class="menu">
+                    <div class="search">
+                        <input type="text" placeholder="">
+                        <button><img src="img/srch.svg" alt=""></button>
+                    </div>
+                    <a href="#"><img src="img/like.svg" alt=""></a>
+                    <a href="card.html"><img src="img/cart.svg" alt=""></a>
+                    <div id="open-popup" class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                </div>
+            </header>
+            <!-- шапка -->
+        </div>
+        <!-- корзина -->
+        <div class="container my">
+            <div class="title">
+                <h2>Корзина</h2>
+            </div>
+            <div class="card-title">
+                <p>товар</p>
+                <p>цвет | размер</p>
+                <p>цена</p>
+                <p>кол-во</p>
+            </div>
+            <div class="card-item">
+                <div class="card-name">
+                    <img src="img/prod1.png" alt="">
+                    <a href="product.html">Nike Air Zoom <br>
+                        Structure 24</a>
+                </div>
+                <p>розовый <span>|</span> 40 </p>
+                <p>4.000 ₽</p>
+                <div class="count">
+                    <span>-</span> 1 <span>+</span>
+                </div>
+                <img class="trash" src="img/trash.svg" alt="">
+            </div>
+            <div class="card-item">
+                <div class="card-name">
+                    <img src="img/product2.png" alt="">
+                    <a href="product.html">Reebok Insta <br>pump
+                        Fury 95</a>
+                </div>
+                <p>розовый <span>|</span> 40 </p>
+                <p>14.000 ₽</p>
+                <div class="count">
+                    <span>-</span> 1 <span>+</span>
+                </div>
+                <img class="trash" src="img/trash.svg" alt="">
+            </div>
+            <div class="reg">
+                <form class="forma" action=".">
+                    <input type="text" placeholder="промокод">
+                    <button>→</button>
+                </form>
+                <div class="cost">
+                    <div class="title">
+                        <h2>Стоимость</h2>
+                    </div>
+                    <div class="cost-content">
+                        <span>общая сумма</span>
+                        <p>18.000 ₽</p>
+                    </div>
+                    <div class="cost-content">
+                        <span>доставка*</span>
+                        <p>300 ₽</p>
+                    </div>
+                    <div class="cost-content ">
+                        <span>итог</span>
+                        <p>18.300 ₽</p>
+                    </div>
+                    <div class="cost-content">
+                        <span>*бесплатная доставка <br>
+                            на сумму от 10.000 ₽</span>
+                        <a href="#">к оформлению ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- корзина -->
+    <!-- подвал -->
+    <footer class="container my">
+        <div class="contact">
+            <div class="logo"><img src="img/logofoot.svg" alt=""></div>
+            <div class="form">
+                <p>Будьте в курсе наших <br>
+                    новостей</p>
+                <form class="forma" action=".">
+                    <input type="text" placeholder="e-mail">
+                    <button>→</button>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <p>Меню</p>
+            <a href="main.html">главная</a>
+            <a href="catalog.html">каталог</a>
+            <a href="card.html">корзина</a>
+            <a href="#">избранное</a>
+        </nav>
+        <div class="contact">
+            <div class="contact-content">
+                <p>Адрес</p>
+                <a href="#">г. Казань <br>
+                    ул. Галеева д. 3а</a>
+            </div>
+            <div class="contact-content">
+                <p>Телефон</p>
+                <a href="#">+ 7 (900) 894-54-32</a>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contact-content">
+                <p>Почта</p>
+                <a href="#">stepbystep@mail.ru</a>
+            </div>
+            <div class="net">
+                <a href="#"><img src="img/vk.svg" alt=""></a>
+                <a href="#"><img src="img/tg.svg" alt=""></a>
+                <a href="#"><img src="img/youtube.svg" alt=""></a>
+            </div>
+        </div>
+        <a class="up" href="#"><img src="img/up.svg" alt=""></a>
+    </footer>
+    <!-- подвал -->
+    </div>
+
+
+    <script>
+        // меню
+        const btn = document.getElementById('open-popup');
+
+        function openPopup() {
+            document.getElementById('popup').classList.add('popup-open')
+            document.getElementById('popup').classList.remove('popup-close')
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.remove('popup-open')
+            document.getElementById('popup').classList.add('popup-close')
+        }
+
+        btn.onclick = function () {
+            openPopup()
+            document.body.style.overflow = "hidden"
+        }
+
+        document.getElementById('close-popup').onclick = function () {
+            closePopup()
+            document.body.style.overflow = "visible"
+        }
+        // меню
+    </script>
+    <!-- переход -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("body").css("display", "none");
+            $("body").fadeIn(500);
+            $("a.fade").click(function (event) {
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(500, redirectPage);
+            });
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+        }); 
+    </script>
+    <!-- переход -->
+</body>
+
+</html>

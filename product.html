@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Step by Step</title>
+</head>
+
+<body>
+    <!-- меню -->
+    <div class="popup popup-close popup-open" id="popup">
+        <div class="popup-body" id="popup-body">
+            <div class="close">
+                <h5>Меню</h5>
+                <div id="close-popup">&#10006</div>
+            </div>
+            <nav>
+                <a class="fade" href="main.html">главная</a>
+                <a class="linkactive fade" href="catalog.html">каталог</a>
+                <a class="fade" href="card.html">корзина</a>
+                <a class="fade" href="#">избранное</a>
+            </nav>
+        </div>
+    </div>
+    <!-- меню -->
+    <div class="bc" style="background-color: #F3F3F3;">
+        <div class="main container">
+            <!-- шапка -->
+            <header>
+                <a href="main.html"><img src="img/logo.svg" alt=""></a>
+                <div class="menu">
+                    <div class="search">
+                        <input type="text" placeholder="">
+                        <button><img src="img/srch.svg" alt=""></button>
+                    </div>
+                    <a href="#"><img src="img/like.svg" alt=""></a>
+                    <a href="card.html"><img src="img/cart.svg" alt=""></a>
+                    <div id="open-popup" class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                </div>
+            </header>
+            <!-- шапка -->
+        </div>
+        <!-- карточка товара -->
+        <div class="container my">
+            <div class="bread">
+                <a href="main.html">главная ></a>  <a href="catalog.html">каталог ></a>  <a class="linkactive"
+                    href="catalog.html">Nike Air Zoom Structure 24</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-content">
+                <span class="priice">7.000 ₽</span>
+                <div class="color">
+                    <p>черный / <span>розовый</span> / <br> фиолетовый</p>
+                    <img src="img/color.svg" alt="">
+                </div>
+                <h3 >описание > <br> <span style="font-size:16px; color: rgb(122, 122, 122);">Легкие кроссовки с превосходной <br>  амортизацией  — идеальный выбор <br> для пробежек.</span><br><br>характеристики > <br><br> состав ></h3>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                    <img id="image" src="" alt="">
+                    <div class="navigation">
+                        <label class="lab labb1" onclick="changeColorr1();Img1()"></label>
+                        <label class="lab labb2" onclick="changeColorr2();Img2()"></label>
+                        <label class="lab labb3" onclick="changeColorr3();Img3()"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <span>Арт. 1045</span>
+                <div class="name">
+                    <span>NIKE</span> <br>
+                    <h5>Air Zoom <br>
+                        Structure 24 </h5>
+                </div>
+                <pre>38  /  <span>40</span>  /  41  /  43</pre>
+                <div class="tocard">
+                    <a class="btn" href="#">+ в корзину</a>
+                    <a href="#"><img src="img/like.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- карточка товара -->
+        <!-- подвал -->
+        <footer class="container my">
+            <div class="contact">
+                <div class="logo"><img src="img/logofoot.svg" alt=""></div>
+                <div class="form">
+                    <p>Будьте в курсе наших <br>
+                        новостей</p>
+                    <form class="forma" action=".">
+                        <input type="text" placeholder="e-mail">
+                        <button>→</button>
+                    </form>
+                </div>
+            </div>
+            <nav>
+                <p>Меню</p>
+                <a href="main.html">главная</a>
+                <a href="catalog.html">каталог</a>
+                <a href="card.html">корзина</a>
+                <a href="#">избранное</a>
+            </nav>
+            <div class="contact">
+                <div class="contact-content">
+                    <p>Адрес</p>
+                    <a href="#">г. Казань <br>
+                        ул. Галеева д. 3а</a>
+                </div>
+                <div class="contact-content">
+                    <p>Телефон</p>
+                    <a href="#">+ 7 (900) 894-54-32</a>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="contact-content">
+                    <p>Почта</p>
+                    <a href="#">stepbystep@mail.ru</a>
+                </div>
+                <div class="net">
+                    <a href="#"><img src="img/vk.svg" alt=""></a>
+                    <a href="#"><img src="img/tg.svg" alt=""></a>
+                    <a href="#"><img src="img/youtube.svg" alt=""></a>
+                </div>
+            </div>
+            <a class="up" href="#"><img src="img/up.svg" alt=""></a>
+        </footer>
+        <!-- подвал -->
+    </div>
+
+
+    <script>
+        // переключатель
+        window.addEventListener('load', () => {
+            const sec1 = document.querySelector(".labb1");
+            sec1.style.background = '#7351847a';
+            sec1.style.height = '20px';
+            sec1.style.width = '20px';
+            document.getElementById("image").src = 'img/prod1.png';
+        });
+
+        function changeColorr1() {
+            const sec = document.querySelector(".labb1");
+            sec.style.background = '#7351847a';
+            sec.style.height = '20px';
+            sec.style.width = '20px';
+            const sec2 = document.querySelector(".labb2");
+            const sec3 = document.querySelector(".labb3");
+            sec2.style.background = '#33333370';
+            sec3.style.background = '#33333370';
+            sec2.style.height = '15px';
+            sec2.style.width = '15px';
+            sec3.style.height = '15px';
+            sec3.style.width = '15px';
+        }
+        function changeColorr2() {
+            const sec = document.querySelector(".labb2");
+            sec.style.background = '#7351847a';
+            sec.style.height = '20px';
+            sec.style.width = '20px';
+            const sec2 = document.querySelector(".labb1");
+            const sec3 = document.querySelector(".labb3");
+            sec2.style.background = '#33333370';
+            sec3.style.background = '#33333370';
+            sec2.style.height = '15px';
+            sec2.style.width = '15px';
+            sec3.style.height = '15px';
+            sec3.style.width = '15px';
+        }
+        function changeColorr3() {
+            const sec = document.querySelector(".labb3");
+            sec.style.background = '#7351847a';
+            sec.style.height = '20px';
+            sec.style.width = '20px';
+            const sec2 = document.querySelector(".labb2");
+            const sec3 = document.querySelector(".labb1");
+            sec2.style.background = '#33333370';
+            sec3.style.background = '#33333370';
+            sec2.style.height = '15px';
+            sec2.style.width = '15px';
+            sec3.style.height = '15px';
+            sec3.style.width = '15px';
+        }
+        // переключатель
+        // слайдер
+        var image = document.getElementById("image");
+        function Img1() {
+            image.src = 'img/prod1.png';
+        }
+        function Img2() {
+            image.src = 'img/prod2.png';
+        }
+        function Img3() {
+            image.src = 'img/prod3.png';
+        }
+        // слайдер
+        // меню
+        const btn = document.getElementById('open-popup');
+
+        function openPopup() {
+            document.getElementById('popup').classList.add('popup-open')
+            document.getElementById('popup').classList.remove('popup-close')
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.remove('popup-open')
+            document.getElementById('popup').classList.add('popup-close')
+        }
+
+        btn.onclick = function () {
+            openPopup()
+            document.body.style.overflow = "hidden"
+        }
+
+        document.getElementById('close-popup').onclick = function () {
+            closePopup()
+            document.body.style.overflow = "visible"
+        }
+        // меню
+    </script>
+    <!-- переход -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("body").css("display", "none");
+            $("body").fadeIn(500);
+            $("a.fade").click(function (event) {
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(500, redirectPage);
+            });
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+        }); 
+    </script>
+    <!-- переход -->
+</body>
+
+</html>
